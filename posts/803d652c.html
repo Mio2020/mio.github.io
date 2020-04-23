@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="1. 项目文件组成项目组织文件samp2_1.pro ， 存储项目设置的文件。  主程序入口文件main.cpp ，实现main() 函数的程序文件。 窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。 widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的， 一个">
+  <meta name="description" content="1. 项目文件组成项目组织文件samp2_1.pro ， 存储项目设置的文件。  主程序入口文件main.cpp ，实现main() 函数的程序文件。  窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。  widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Qt学习（2）Qt的UI文件设计与运行机制">
 <meta property="og:url" content="http://akiyamamio.cn/posts/803d652c.html">
 <meta property="og:site_name" content="Mio">
-<meta property="og:description" content="1. 项目文件组成项目组织文件samp2_1.pro ， 存储项目设置的文件。  主程序入口文件main.cpp ，实现main() 函数的程序文件。 窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。 widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的， 一个">
+<meta property="og:description" content="1. 项目文件组成项目组织文件samp2_1.pro ， 存储项目设置的文件。  主程序入口文件main.cpp ，实现main() 函数的程序文件。  窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。  widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-06-26T15:56:00.000Z">
-<meta property="article:modified_time" content="2020-04-23T16:20:58.490Z">
+<meta property="article:modified_time" content="2020-04-23T17:48:34.298Z">
 <meta property="article:author" content="Akiyama Mio">
 <meta property="article:tag" content="Qt">
 <meta name="twitter:card" content="summary">
@@ -235,9 +235,12 @@
     
     <h2 id="1-项目文件组成"><a href="#1-项目文件组成" class="headerlink" title="1. 项目文件组成"></a>1. 项目文件组成</h2><p>项目组织文件samp2_1.pro ， 存储项目设置的文件。</p>
 <ul>
-<li>主程序入口文件main.cpp ，实现main() 函数的程序文件。</li>
-<li>窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。</li>
-<li>widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的， 一个类一般有一个头文件C. h 文件）和一个源程序文件C. cpp 文件）。</li>
+<li><p>主程序入口文件main.cpp ，实现main() 函数的程序文件。</p>
+</li>
+<li><p>窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。</p>
+</li>
+<li><p>widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的， 一个类一般有一个头文件C. h 文件）和一个源程序文件C. cpp 文件）。</p>
+</li>
 </ul>
 <h2 id="2-项目管理文件"><a href="#2-项目管理文件" class="headerlink" title="2.项目管理文件"></a>2.项目管理文件</h2><p>后缀为“ .pro ”的文件是项目的管理文件， 文件名就是项目的名称，如本项目中的samp2_ 1.pro</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 表示项目中加入core gui模块（Qt用于GUI设计的类库模块，如果创建Console程序，就不需要该模块）</span></span><br><span class="line"><span class="comment"># 如果用到了涉及数据库操作，就需要sql模块，增加一行 QT +=sql</span></span><br><span class="line">QT       += core gui</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 条件执行语句，表示当Qt主版本大于4时，才加入widgets模块</span></span><br><span class="line">greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表示生成的目标可执行文件名称</span></span><br><span class="line">TARGET = sample2_1</span><br><span class="line"><span class="comment"># 表示使用的模板是app，为一般应用程序</span></span><br><span class="line">TEMPLATE = app</span><br><span class="line"></span><br><span class="line"><span class="comment"># The following define makes your compiler emit warnings if you use</span></span><br><span class="line"><span class="comment"># any feature of Qt which has been marked as deprecated (the exact warnings</span></span><br><span class="line"><span class="comment"># depend on your compiler). Please consult the documentation of the</span></span><br><span class="line"><span class="comment"># deprecated API in order to know how to port your code away from it.</span></span><br><span class="line"><span class="comment"># 如果您使用Qt的任何标记为弃用的特性(确切的警告取决于您的编译器)，下面的定义将使编译器发出警告。</span></span><br><span class="line"><span class="comment"># 请参考已弃用API的文档，以了解如何将代码从该API移植出去。</span></span><br><span class="line">DEFINES += QT_DEPRECATED_WARNINGS</span><br><span class="line"></span><br><span class="line"><span class="comment"># You can also make your code fail to compile if you use deprecated APIs.</span></span><br><span class="line"><span class="comment"># In order to do so, uncomment the following line.</span></span><br><span class="line"><span class="comment"># You can also select to disable deprecated APIs only up to a certain version of Qt.</span></span><br><span class="line"><span class="comment"># 如果使用已弃用的api，还可能导致代码无法编译。为了做到这一点，取消下面一行的注释。</span></span><br><span class="line"><span class="comment"># 您还可以选择禁用不支持的api，但仅限于特定版本的Qt。</span></span><br><span class="line"><span class="comment">#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0</span></span><br><span class="line"></span><br><span class="line">CONFIG += c++11</span><br><span class="line"></span><br><span class="line"><span class="comment"># 记录项目中的源文件、头文件和窗体文件，无需手动修改</span></span><br><span class="line">SOURCES += \</span><br><span class="line">        main.cpp \</span><br><span class="line">        widget.cpp</span><br><span class="line"></span><br><span class="line">HEADERS += \</span><br><span class="line">        widget.h</span><br><span class="line"></span><br><span class="line">FORMS += \</span><br><span class="line">        widget.ui</span><br><span class="line"></span><br><span class="line"><span class="comment"># Default rules for deployment.</span></span><br><span class="line">qnx: target.path = /tmp/$<span class="variable">$&#123;TARGET&#125;</span>/bin</span><br><span class="line"><span class="keyword">else</span>: unix:!android: target.path = /opt/$<span class="variable">$&#123;TARGET&#125;</span>/bin</span><br><span class="line">!isEmpty(target.path): INSTALLS += target</span><br></pre></td></tr></table></figure>
@@ -389,15 +392,14 @@
 
   <div id="gitment-ctn"></div>
   
-    <!-- 中文 -->
-    <link rel="stylesheet" href="/lib/gitment.css">
-    <script src="/lib/gitment.js"></script>
+    <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+    <script src="https://jjeejj.github.io/js/gitment.js"></script>
   
   <script>
     <!-- id: "Qt学习（2）Qt的UI文件设计与运行机制" -->
     var gitment = new Gitment({
       id: "20190626235600",
-      owner: 'mio2020',
+      owner: 'Mio2020',
       repo: 'mio2020.github.io',
       oauth: {
         client_id: '5b271581c3cb8b06da98',
@@ -727,7 +729,7 @@
     },
     mobile: {
        show: false, 
-       scale: 0.6 
+       scale: 0.5 
     },
     react: {
        opacity: 0.9 

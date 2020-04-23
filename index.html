@@ -291,7 +291,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/posts/b5c3f366.html">展开全文 >></a>
+      <a class="article-more-a" href="/posts/b5c3f366.html">Read more >></a>
     </p>
     
 
@@ -392,7 +392,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/posts/eed7001c.html">展开全文 >></a>
+      <a class="article-more-a" href="/posts/eed7001c.html">Read more >></a>
     </p>
     
 
@@ -554,7 +554,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/posts/6ec7bc05.html">展开全文 >></a>
+      <a class="article-more-a" href="/posts/6ec7bc05.html">Read more >></a>
     </p>
     
 
@@ -615,9 +615,12 @@
     
     <h2 id="1-项目文件组成"><a href="#1-项目文件组成" class="headerlink" title="1. 项目文件组成"></a>1. 项目文件组成</h2><p>项目组织文件samp2_1.pro ， 存储项目设置的文件。</p>
 <ul>
-<li>主程序入口文件main.cpp ，实现main() 函数的程序文件。</li>
-<li>窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。</li>
-<li>widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的， 一个类一般有一个头文件C. h 文件）和一个源程序文件C. cpp 文件）。</li>
+<li><p>主程序入口文件main.cpp ，实现main() 函数的程序文件。</p>
+</li>
+<li><p>窗体界面文件widget.ui ， 一个XML 格式存储的窗体上的元件及其布局的文件。</p>
+</li>
+<li><p>widget.h 是所设计的窗体类的头文件， widget.cpp 是widget.h里定义类的实现文件。在C＋＋里， 任何窗体或界面组件都是用类封装的， 一个类一般有一个头文件C. h 文件）和一个源程序文件C. cpp 文件）。</p>
+</li>
 </ul>
 <h2 id="2-项目管理文件"><a href="#2-项目管理文件" class="headerlink" title="2.项目管理文件"></a>2.项目管理文件</h2><p>后缀为“ .pro ”的文件是项目的管理文件， 文件名就是项目的名称，如本项目中的samp2_ 1.pro</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 表示项目中加入core gui模块（Qt用于GUI设计的类库模块，如果创建Console程序，就不需要该模块）</span></span><br><span class="line"><span class="comment"># 如果用到了涉及数据库操作，就需要sql模块，增加一行 QT +=sql</span></span><br><span class="line">QT       += core gui</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 条件执行语句，表示当Qt主版本大于4时，才加入widgets模块</span></span><br><span class="line">greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表示生成的目标可执行文件名称</span></span><br><span class="line">TARGET = sample2_1</span><br><span class="line"><span class="comment"># 表示使用的模板是app，为一般应用程序</span></span><br><span class="line">TEMPLATE = app</span><br><span class="line"></span><br><span class="line"><span class="comment"># The following define makes your compiler emit warnings if you use</span></span><br><span class="line"><span class="comment"># any feature of Qt which has been marked as deprecated (the exact warnings</span></span><br><span class="line"><span class="comment"># depend on your compiler). Please consult the documentation of the</span></span><br><span class="line"><span class="comment"># deprecated API in order to know how to port your code away from it.</span></span><br><span class="line"><span class="comment"># 如果您使用Qt的任何标记为弃用的特性(确切的警告取决于您的编译器)，下面的定义将使编译器发出警告。</span></span><br><span class="line"><span class="comment"># 请参考已弃用API的文档，以了解如何将代码从该API移植出去。</span></span><br><span class="line">DEFINES += QT_DEPRECATED_WARNINGS</span><br><span class="line"></span><br><span class="line"><span class="comment"># You can also make your code fail to compile if you use deprecated APIs.</span></span><br><span class="line"><span class="comment"># In order to do so, uncomment the following line.</span></span><br><span class="line"><span class="comment"># You can also select to disable deprecated APIs only up to a certain version of Qt.</span></span><br><span class="line"><span class="comment"># 如果使用已弃用的api，还可能导致代码无法编译。为了做到这一点，取消下面一行的注释。</span></span><br><span class="line"><span class="comment"># 您还可以选择禁用不支持的api，但仅限于特定版本的Qt。</span></span><br><span class="line"><span class="comment">#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0</span></span><br><span class="line"></span><br><span class="line">CONFIG += c++11</span><br><span class="line"></span><br><span class="line"><span class="comment"># 记录项目中的源文件、头文件和窗体文件，无需手动修改</span></span><br><span class="line">SOURCES += \</span><br><span class="line">        main.cpp \</span><br><span class="line">        widget.cpp</span><br><span class="line"></span><br><span class="line">HEADERS += \</span><br><span class="line">        widget.h</span><br><span class="line"></span><br><span class="line">FORMS += \</span><br><span class="line">        widget.ui</span><br><span class="line"></span><br><span class="line"><span class="comment"># Default rules for deployment.</span></span><br><span class="line">qnx: target.path = /tmp/$<span class="variable">$&#123;TARGET&#125;</span>/bin</span><br><span class="line"><span class="keyword">else</span>: unix:!android: target.path = /opt/$<span class="variable">$&#123;TARGET&#125;</span>/bin</span><br><span class="line">!isEmpty(target.path): INSTALLS += target</span><br></pre></td></tr></table></figure>
@@ -713,7 +716,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/posts/803d652c.html">展开全文 >></a>
+      <a class="article-more-a" href="/posts/803d652c.html">Read more >></a>
     </p>
     
 
@@ -842,7 +845,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/posts/e933cf12.html">展开全文 >></a>
+      <a class="article-more-a" href="/posts/e933cf12.html">Read more >></a>
     </p>
     
 
@@ -901,8 +904,10 @@
   <div class="article-entry" itemprop="articleBody">
     
     
-    <h2 id="1-检查机器配置及系统环境"><a href="#1-检查机器配置及系统环境" class="headerlink" title="1.检查机器配置及系统环境"></a>1.检查机器配置及系统环境</h2><h3 id="（1-1）查看主机是否安装NVIDIA显卡"><a href="#（1-1）查看主机是否安装NVIDIA显卡" class="headerlink" title="（1.1）查看主机是否安装NVIDIA显卡"></a>（1.1）查看主机是否安装NVIDIA显卡</h3><pre><code>lspci | grep -i nvidia</code></pre><p>如果输出有nvidia设备，则已经安装</p>
-<h3 id="（1-2）查看主机是否安装NVIDIA驱动及版本信息"><a href="#（1-2）查看主机是否安装NVIDIA驱动及版本信息" class="headerlink" title="（1.2）查看主机是否安装NVIDIA驱动及版本信息"></a>（1.2）查看主机是否安装NVIDIA驱动及版本信息</h3><pre><code>nvidia-smi</code></pre><p>如果已经安装驱动，则会显示当前NVIDIA显卡工作情况：</p>
+    <h2 id="1-检查机器配置及系统环境"><a href="#1-检查机器配置及系统环境" class="headerlink" title="1.检查机器配置及系统环境"></a>1.检查机器配置及系统环境</h2><h3 id="（1-1）查看主机是否安装NVIDIA显卡"><a href="#（1-1）查看主机是否安装NVIDIA显卡" class="headerlink" title="（1.1）查看主机是否安装NVIDIA显卡"></a>（1.1）查看主机是否安装NVIDIA显卡</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lspci | grep -i nvidia</span><br></pre></td></tr></table></figure>
+<p>如果输出有nvidia设备，则已经安装</p>
+<h3 id="（1-2）查看主机是否安装NVIDIA驱动及版本信息"><a href="#（1-2）查看主机是否安装NVIDIA驱动及版本信息" class="headerlink" title="（1.2）查看主机是否安装NVIDIA驱动及版本信息"></a>（1.2）查看主机是否安装NVIDIA驱动及版本信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi</span><br></pre></td></tr></table></figure>
+<p>如果已经安装驱动，则会显示当前NVIDIA显卡工作情况：</p>
 <ul>
 <li>GPU：GPU 编号</li>
 <li>Name：GPU 型号</li>
@@ -918,42 +923,55 @@
 <li>Compute M：compute mode，计算模式</li>
 </ul>
 <p>如果显示该命令不存在，则未安装NVIDIA驱动，或者使用下面命令查看驱动版本：</p>
-<pre><code>cat /proc/driver/nvidia/version</code></pre><h3 id="（1-3）查看系统是否已经安装CUDA及版本信息"><a href="#（1-3）查看系统是否已经安装CUDA及版本信息" class="headerlink" title="（1.3）查看系统是否已经安装CUDA及版本信息"></a>（1.3）查看系统是否已经安装CUDA及版本信息</h3><pre><code>cat  /usr/local/cuda/version.txt</code></pre><p>如果已经正常安装，则会显示出<code>/usr/local/cuda</code>路径对应的CUDA版本及补丁信息：</p>
-<pre><code>CUDA Version 9.0.176
-CUDA Patch Version 9.0.176.1
-CUDA Patch Version 9.0.176.2
-CUDA Patch Version 9.0.176.3</code></pre><p>这里的<code>/usr/local/cuda</code>是一个软链接，指向<code>/usr/local/cuda-9.0</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/driver/nvidia/version</span><br></pre></td></tr></table></figure>
+
+<h3 id="（1-3）查看系统是否已经安装CUDA及版本信息"><a href="#（1-3）查看系统是否已经安装CUDA及版本信息" class="headerlink" title="（1.3）查看系统是否已经安装CUDA及版本信息"></a>（1.3）查看系统是否已经安装CUDA及版本信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat  /usr/<span class="built_in">local</span>/cuda/version.txt</span><br></pre></td></tr></table></figure>
+<p>如果已经正常安装，则会显示出<code>/usr/local/cuda</code>路径对应的CUDA版本及补丁信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CUDA Version 9.0.176</span><br><span class="line">CUDA Patch Version 9.0.176.1</span><br><span class="line">CUDA Patch Version 9.0.176.2</span><br><span class="line">CUDA Patch Version 9.0.176.3</span><br></pre></td></tr></table></figure>
+<p>这里的<code>/usr/local/cuda</code>是一个软链接，指向<code>/usr/local/cuda-9.0</code></p>
 <p>如果可能还有其它版本的CUDA，请检查<code>/usr/local/</code>路径下是否还有其它版本，比如<code>/usr/local/cuda-8.0</code>，<br>如果有但不需要使用，不加入PATH环境变量就行(关于添加环境变量请查看第(1.5)点)</p>
-<h3 id="（1-4）查看是否已经安装cuDNN及版本信息"><a href="#（1-4）查看是否已经安装cuDNN及版本信息" class="headerlink" title="（1.4）查看是否已经安装cuDNN及版本信息"></a>（1.4）查看是否已经安装cuDNN及版本信息</h3><pre><code>locate /libcudnn.so</code></pre><p>以上命令为查找 / 目录下所有以<code>libcudnn.so</code>开头的文件，以下输出即为已经安装cuDNN6和cuDNN7</p>
-<pre><code>/usr/lib/x86_64-linux-gnu/libcudnn.so.6
-/usr/lib/x86_64-linux-gnu/libcudnn.so.6.0.21
-/usr/lib/x86_64-linux-gnu/libcudnn.so.7
-/usr/lib/x86_64-linux-gnu/libcudnn.so.7.0.5</code></pre><h3 id="（1-5）-查看CUDA是否已经加入PATH路径"><a href="#（1-5）-查看CUDA是否已经加入PATH路径" class="headerlink" title="（1.5） 查看CUDA是否已经加入PATH路径"></a>（1.5） 查看CUDA是否已经加入PATH路径</h3><pre><code>echo $PATH</code></pre><p>如果没有，可以选择将以下命令添加到 <code>~/.bashrc</code>的最后两行</p>
-<pre><code>export PATH=/usr/local/cuda-9.0/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH</code></pre><p>然后使用<code>source</code>命令使其生效即可</p>
-<pre><code>source ~/.bashrc</code></pre><p>如果在PATH变量中没有发现CUDA路径，但TensorFlow等程序能正常调用，则可能已通过(1.5.2)方式添加</p>
+<h3 id="（1-4）查看是否已经安装cuDNN及版本信息"><a href="#（1-4）查看是否已经安装cuDNN及版本信息" class="headerlink" title="（1.4）查看是否已经安装cuDNN及版本信息"></a>（1.4）查看是否已经安装cuDNN及版本信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">locate /libcudnn.so</span><br></pre></td></tr></table></figure>
+<p>以上命令为查找 / 目录下所有以<code>libcudnn.so</code>开头的文件，以下输出即为已经安装cuDNN6和cuDNN7</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/x86_64-linux-gnu/libcudnn.so.6</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libcudnn.so.6.0.21</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libcudnn.so.7</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libcudnn.so.7.0.5</span><br></pre></td></tr></table></figure>
+<h3 id="（1-5）-查看CUDA是否已经加入PATH路径"><a href="#（1-5）-查看CUDA是否已经加入PATH路径" class="headerlink" title="（1.5） 查看CUDA是否已经加入PATH路径"></a>（1.5） 查看CUDA是否已经加入PATH路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<p>如果没有，可以选择将以下命令添加到 <code>~/.bashrc</code>的最后两行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/<span class="built_in">local</span>/cuda-9.0/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/<span class="built_in">local</span>/cuda-9.0/lib64:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+<p>然后使用<code>source</code>命令使其生效即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>如果在PATH变量中没有发现CUDA路径，但TensorFlow等程序能正常调用，则可能已通过(1.5.2)方式添加</p>
 <h6 id="（1-5-1）环境变量可以选择其它文件位置"><a href="#（1-5-1）环境变量可以选择其它文件位置" class="headerlink" title="（1.5.1）环境变量可以选择其它文件位置"></a>（1.5.1）环境变量可以选择其它文件位置</h6><ul>
 <li>直接<code>export PATH=/.../bin:$PATH</code>    对于当前终端生效</li>
 <li>在<code>~/.bashrc</code>文件中添加<code>export PATH=/.../bin:$PATH</code>  对于当前用户生效，每开一个终端，<code>.bashrc</code>文件会执行一次</li>
 <li>在<code>/etc/profile</code>文件中添加<code>export PATH=/.../bin:$PATH</code>   对于所有用户生效</li>
 </ul>
 <h6 id="（1-5-2）CUDA加速程序无法调用CUDA时方法"><a href="#（1-5-2）CUDA加速程序无法调用CUDA时方法" class="headerlink" title="（1.5.2）CUDA加速程序无法调用CUDA时方法"></a>（1.5.2）CUDA加速程序无法调用CUDA时方法</h6><p>在/etc/ld.so.conf.d目录下新建一个cuda.conf文件，将所需要用的库的目录写入进去，并更新生效</p>
-<pre><code>sudo vim /etc/ld.so.conf.d/cuda.conf  </code></pre><p>添加内容：</p>
-<pre><code>/usr/local/cuda/lib64</code></pre><p>更新配置：</p>
-<pre><code>sudo ldconfig</code></pre><h3 id="（1-6）检查显示器输出"><a href="#（1-6）检查显示器输出" class="headerlink" title="（1.6）检查显示器输出"></a>（1.6）检查显示器输出</h3><p>检查显示器是接在主板的集显口上，还是独显口上，对应关注(2.4)或（3.4）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ld.so.conf.d/cuda.conf</span><br></pre></td></tr></table></figure>
+<p>添加内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/cuda/lib64</span><br></pre></td></tr></table></figure>
+<p>更新配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure>
+<h3 id="（1-6）检查显示器输出"><a href="#（1-6）检查显示器输出" class="headerlink" title="（1.6）检查显示器输出"></a>（1.6）检查显示器输出</h3><p>检查显示器是接在主板的集显口上，还是独显口上，对应关注(2.4)或（3.4）</p>
 <h2 id="2-全新安装NVIDIA驱动和CUDA"><a href="#2-全新安装NVIDIA驱动和CUDA" class="headerlink" title="2.全新安装NVIDIA驱动和CUDA"></a>2.全新安装NVIDIA驱动和CUDA</h2><p>如果上述检查中，NVIDIA显卡驱动和CUDA都没有安装，请按以下步骤执行；</p>
 <p>如果已经安装NVIDIA显卡驱动但没有安装CUDA，请跳转至3；</p>
 <h3 id="（2-1）-禁用nouveau"><a href="#（2-1）-禁用nouveau" class="headerlink" title="（2.1） 禁用nouveau"></a>（2.1） 禁用nouveau</h3><p>把nouveau加入blacklist.conf</p>
-<pre><code>sudo vim /etc/modprobe.d/blacklist.conf </code></pre><p>或者 新建一个nouveau-blacklist.conf文件</p>
-<pre><code>sudo vim /etc/modprobe.d/nouveau-blacklist.conf </code></pre><p>在文件末尾加入</p>
-<pre><code>blacklist nouveau</code></pre><p>然后运行</p>
-<pre><code>sudo update-initramfs -u</code></pre><p>再查询系统中是否还有nouveau</p>
-<pre><code>lsmod | grep nouveau</code></pre><p>如果还有，建议重启一次</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/modprobe.d/blacklist.conf</span><br></pre></td></tr></table></figure>
+<p>或者 新建一个nouveau-blacklist.conf文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/modprobe.d/nouveau-blacklist.conf</span><br></pre></td></tr></table></figure>
+<p>在文件末尾加入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blacklist nouveau</span><br></pre></td></tr></table></figure>
+<p>然后运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-initramfs -u</span><br></pre></td></tr></table></figure>
+<p>再查询系统中是否还有nouveau</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep nouveau</span><br></pre></td></tr></table></figure>
+<p>如果还有，建议重启一次</p>
 <p>一般重启以后因为没有驱动无法进入图形界面或者图形界面显示很差，请按以下(2.2和2.3)参考进入tty控制台操作</p>
-<h3 id="（2-2）关闭图形界面"><a href="#（2-2）关闭图形界面" class="headerlink" title="（2.2）关闭图形界面"></a>（2.2）关闭图形界面</h3><pre><code>sudo /etc/init.d/lightdm stop</code></pre><p>或者</p>
-<pre><code>sudo service lightdm stop</code></pre><h3 id="（2-3）-进入tty控制台"><a href="#（2-3）-进入tty控制台" class="headerlink" title="（2.3） 进入tty控制台"></a>（2.3） 进入tty控制台</h3><p>ctrl + Alt + F1 登录控制台模式</p>
+<h3 id="（2-2）关闭图形界面"><a href="#（2-2）关闭图形界面" class="headerlink" title="（2.2）关闭图形界面"></a>（2.2）关闭图形界面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/lightdm stop</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service lightdm stop</span><br></pre></td></tr></table></figure>
+<h3 id="（2-3）-进入tty控制台"><a href="#（2-3）-进入tty控制台" class="headerlink" title="（2.3） 进入tty控制台"></a>（2.3） 进入tty控制台</h3><p>ctrl + Alt + F1 登录控制台模式</p>
 <h3 id="（2-4）安装CUDA"><a href="#（2-4）安装CUDA" class="headerlink" title="（2.4）安装CUDA"></a>（2.4）安装CUDA</h3><p>从tty控制台进入CUDA安装包目录，直接运行安装包即可</p>
-<pre><code>sudo sh cuda_9.0.176_384.81_linux</code></pre><p>按提示选择接受协议，选择安装路径，安装选项（显卡驱动，OpenGLFiles等）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_9.0.176_384.81_linux</span><br></pre></td></tr></table></figure>
+<p>按提示选择接受协议，选择安装路径，安装选项（显卡驱动，OpenGLFiles等）</p>
 <ul>
 <li>选择是否安装显卡驱动 ?</li>
 </ul>
@@ -965,34 +983,46 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH</code></pre><p
 <p>若显示器从集显输出，则选择不安装；<br>若显示器从独显输出，则选择安装；</p>
 </blockquote>
 <h3 id="（2-5）-安装CUDA补丁"><a href="#（2-5）-安装CUDA补丁" class="headerlink" title="（2.5） 安装CUDA补丁"></a>（2.5） 安装CUDA补丁</h3><p>相同步骤依次运行完这些补丁就行，只是选项减少，默认接受协议和默认安装目标即可</p>
-<pre><code>cuda_9.0.176.1_linux.run
-cuda_9.0.176.2_linux.run
-cuda_9.0.176.3_linux.run
-cuda_9.0.176.4_linux.run</code></pre><h3 id="（2-6）安装cuDNN库"><a href="#（2-6）安装cuDNN库" class="headerlink" title="（2.6）安装cuDNN库"></a>（2.6）安装cuDNN库</h3><pre><code>sudo tar -xzvf cudnn-9.0-linux-x64-v7.6.tgz
-sudo cp cuda/include/cudnn.h /usr/local/cuda/include
-sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
-sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*</code></pre><h3 id="（2-7）添加环境变量PATH"><a href="#（2-7）添加环境变量PATH" class="headerlink" title="（2.7）添加环境变量PATH"></a>（2.7）添加环境变量PATH</h3><p>在 <code>~/.bashrc</code> 文件中的最后两行加入以下内容</p>
-<pre><code>export PATH=/usr/local/cuda-9.0/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH</code></pre><p>并且source使之生效</p>
-<pre><code>source ~/.bashrc</code></pre><h3 id="（2-8）验证是否安装好"><a href="#（2-8）验证是否安装好" class="headerlink" title="（2.8）验证是否安装好"></a>（2.8）验证是否安装好</h3><pre><code>nvcc -V</code></pre><p>正确安装即可看到nvcc编译器版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cuda_9.0.176.1_linux.run</span><br><span class="line">cuda_9.0.176.2_linux.run</span><br><span class="line">cuda_9.0.176.3_linux.run</span><br><span class="line">cuda_9.0.176.4_linux.run</span><br></pre></td></tr></table></figure>
+
+<h3 id="（2-6）安装cuDNN库"><a href="#（2-6）安装cuDNN库" class="headerlink" title="（2.6）安装cuDNN库"></a>（2.6）安装cuDNN库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xzvf cudnn-9.0-linux-x64-v7.6.tgz</span><br><span class="line">sudo cp cuda/include/cudnn.h /usr/<span class="built_in">local</span>/cuda/include</span><br><span class="line">sudo cp cuda/lib64/libcudnn* /usr/<span class="built_in">local</span>/cuda/lib64</span><br><span class="line">sudo chmod a+r /usr/<span class="built_in">local</span>/cuda/include/cudnn.h /usr/<span class="built_in">local</span>/cuda/lib64/libcudnn*</span><br></pre></td></tr></table></figure>
+
+<h3 id="（2-7）添加环境变量PATH"><a href="#（2-7）添加环境变量PATH" class="headerlink" title="（2.7）添加环境变量PATH"></a>（2.7）添加环境变量PATH</h3><p>在 <code>~/.bashrc</code> 文件中的最后两行加入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/<span class="built_in">local</span>/cuda-9.0/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/<span class="built_in">local</span>/cuda-9.0/lib64:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+<p>并且source使之生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h3 id="（2-8）验证是否安装好"><a href="#（2-8）验证是否安装好" class="headerlink" title="（2.8）验证是否安装好"></a>（2.8）验证是否安装好</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
+<p>正确安装即可看到nvcc编译器版本</p>
 <h2 id="3-只安装NVIDIA驱动"><a href="#3-只安装NVIDIA驱动" class="headerlink" title="3.只安装NVIDIA驱动"></a>3.只安装NVIDIA驱动</h2><p>如果只需要安装NVIDIA驱动，按以下步骤，（3.1 - 3.3）与（2.1 - 2.3）相同</p>
 <h3 id="（3-1）-禁用nouveau"><a href="#（3-1）-禁用nouveau" class="headerlink" title="（3.1） 禁用nouveau"></a>（3.1） 禁用nouveau</h3><p>新建一个nouveau-blacklist.conf文件</p>
-<pre><code>sudo vim /etc/modprobe.d/nouveau-blacklist.conf </code></pre><p>在文件末尾加入</p>
-<pre><code>blacklist nouveau</code></pre><p>然后运行</p>
-<pre><code>sudo update-initramfs -u</code></pre><p>再查询系统中是否还有nouveau</p>
-<pre><code>lsmod | grep nouveau</code></pre><p>如果还有，建议重启一次</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/modprobe.d/nouveau-blacklist.conf</span><br></pre></td></tr></table></figure>
+<p>在文件末尾加入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blacklist nouveau</span><br></pre></td></tr></table></figure>
+<p>然后运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-initramfs -u</span><br></pre></td></tr></table></figure>
+<p>再查询系统中是否还有nouveau</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep nouveau</span><br></pre></td></tr></table></figure>
+<p>如果还有，建议重启一次</p>
 <p>一般重启以后因为没有驱动无法进入图形界面或者图形界面显示很差，请按以下(3.2和3.3)参考进入tty控制台操作</p>
-<h3 id="（3-2）关闭图形界面"><a href="#（3-2）关闭图形界面" class="headerlink" title="（3.2）关闭图形界面"></a>（3.2）关闭图形界面</h3><pre><code>sudo service lightdm stop</code></pre><h3 id="（3-3）-进入tty控制台"><a href="#（3-3）-进入tty控制台" class="headerlink" title="（3.3） 进入tty控制台"></a>（3.3） 进入tty控制台</h3><p>ctrl + Alt + F1 登录控制台模式</p>
+<h3 id="（3-2）关闭图形界面"><a href="#（3-2）关闭图形界面" class="headerlink" title="（3.2）关闭图形界面"></a>（3.2）关闭图形界面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service lightdm stop</span><br></pre></td></tr></table></figure>
+<h3 id="（3-3）-进入tty控制台"><a href="#（3-3）-进入tty控制台" class="headerlink" title="（3.3） 进入tty控制台"></a>（3.3） 进入tty控制台</h3><p>ctrl + Alt + F1 登录控制台模式</p>
 <h3 id="（3-4）安装NVIDIA驱动"><a href="#（3-4）安装NVIDIA驱动" class="headerlink" title="（3.4）安装NVIDIA驱动"></a>（3.4）安装NVIDIA驱动</h3><p>先添加运行权限</p>
-<pre><code>sudo chmod a+x NVIDIA-Linux-x86_64-390.67.run</code></pre><ul>
-<li><p>如果显示器独显输出，直接运行</p>
-<pre><code>sudo sh NVIDIA-Linux-x86_64-390.67.run</code></pre></li>
-<li><p>如果显示器集显输出，则加入–no-opengl-files选项</p>
-<pre><code>sudo sh NVIDIA-Linux-x86_64-390.67.run –no-opengl-files</code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod a+x NVIDIA-Linux-x86_64-390.67.run</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果显示器独显输出，直接运行<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh NVIDIA-Linux-x86_64-390.67.run</span><br></pre></td></tr></table></figure></li>
+<li>如果显示器集显输出，则加入–no-opengl-files选项<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh NVIDIA-Linux-x86_64-390.67.run –no-opengl-files</span><br></pre></td></tr></table></figure>
+
+
+</li>
 </ul>
-<h3 id="（3-5）-驱动更新方法"><a href="#（3-5）-驱动更新方法" class="headerlink" title="（3.5） 驱动更新方法"></a>（3.5） 驱动更新方法</h3><pre><code>sh NVIDIA-Linux-x86_64-390.67.run --update</code></pre><h3 id="（3-6）驱动卸载方法"><a href="#（3-6）驱动卸载方法" class="headerlink" title="（3.6）驱动卸载方法"></a>（3.6）驱动卸载方法</h3><p>如果因为没安装好opengl-files导致循环登录，无法进入桌面，直接tty模式卸载驱动然后用正确方式重装即可</p>
-<pre><code>sudo apt-get --purge remove nvidia</code></pre><p>或者可以借用官网驱动安装包来卸载</p>
-<pre><code>sh NVIDIA-Linux-x86_64-390.67.run --uninstall</code></pre>
+<h3 id="（3-5）-驱动更新方法"><a href="#（3-5）-驱动更新方法" class="headerlink" title="（3.5） 驱动更新方法"></a>（3.5） 驱动更新方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh NVIDIA-Linux-x86_64-390.67.run --update</span><br></pre></td></tr></table></figure>
+
+<h3 id="（3-6）驱动卸载方法"><a href="#（3-6）驱动卸载方法" class="headerlink" title="（3.6）驱动卸载方法"></a>（3.6）驱动卸载方法</h3><p>如果因为没安装好opengl-files导致循环登录，无法进入桌面，直接tty模式卸载驱动然后用正确方式重装即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get --purge remove nvidia</span><br></pre></td></tr></table></figure>
+
+<p>或者可以借用官网驱动安装包来卸载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh NVIDIA-Linux-x86_64-390.67.run --uninstall</span><br></pre></td></tr></table></figure>
+
     
 
     
@@ -1033,7 +1063,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH</code></pre><p
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/posts/abd19b75.html">展开全文 >></a>
+      <a class="article-more-a" href="/posts/abd19b75.html">Read more >></a>
     </p>
     
 
@@ -1381,7 +1411,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH</code></pre><p
     },
     mobile: {
        show: false, 
-       scale: 0.6 
+       scale: 0.5 
     },
     react: {
        opacity: 0.9 
