@@ -18,7 +18,7 @@
 <meta property="og:description" content="1. 直方图均衡化一幅图像的灰度级可以看成是区间[0, L-1]内的随机变量。基本描绘子是灰度级的概率密度函数(PDF)。令r为输入的灰度变量，s为输出的灰度变量，pr(r) 和 ps(s) 分别表示灰度随机变量r和s的概率密度函数，需求灰度变量 r -&gt; s 的映射关系。若满足可微条件，则输出灰度变量s的PDF可由下面公式得到：$$p_{s}(s)&#x3D;p_{r}(r)\left|\frac{">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-09-07T14:05:00.000Z">
-<meta property="article:modified_time" content="2020-04-23T17:54:06.613Z">
+<meta property="article:modified_time" content="2020-04-24T04:28:15.504Z">
 <meta property="article:author" content="Akiyama Mio">
 <meta property="article:tag" content="OpenCV">
 <meta name="twitter:card" content="summary">
@@ -350,33 +350,46 @@
 
 
 
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    window.onload = function () {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "JUlpxOK1H8CzUHg6N1N24Pgj-gzGzoHsz",
+            app_key: "kgjsd9vX8LCsY5tH99IMMB24",
+            placeholder: "Just go go ヾ(=^▽^=)ノ.",
+            avatar: "mp"
+        });
+    }
+</script>
+</section>
 
 
 
 
 
-
-
-
-  <div id="gitment-ctn"></div>
-  
-    <!-- 中文 -->
-    <link rel="stylesheet" href="/lib/gitment.css">
-    <script src="/lib/gitment.js"></script>
-  
-  <script>
-    <!-- id: "直方图均衡化与规定化" -->
-    var gitment = new Gitment({
-      id: "20190907220500",
-      owner: 'Mio2020',
-      repo: 'mio2020.github.io',
-      oauth: {
-        client_id: '5b271581c3cb8b06da98',
-        client_secret: '1da656546a5505f601238f1da8175dd4cfbe08e3',
-      },
-    })
-    gitment.render('gitment-ctn')
-  </script>
 
 
 
@@ -513,15 +526,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Qt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CUDA</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">NVIDIA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Qt</a>
               </li>
              
               <li class="article-tag-list-item">
